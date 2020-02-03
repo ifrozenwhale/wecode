@@ -1,0 +1,47 @@
+{
+  "pages": [
+    
+    "pages/my/my",
+    "pages/detail/detail",
+    "pages/problems/problems",
+    "pages/index/index",
+    "pages/problems/problemDetail/problemDetail",
+    "pages/finished/finished",
+    "pages/login/login",
+    "pages/userinfo/userinfo",
+    "pages/train/train"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "编程助手",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#328EEB",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/4.png",
+        "selectedIconPath": "images/41.png"
+      },
+      {
+        "pagePath": "pages/detail/detail",
+        "text": "计划",
+        "iconPath": "images/7.png",
+        "selectedIconPath": "images/71.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/6.png",
+        "selectedIconPath": "images/61.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

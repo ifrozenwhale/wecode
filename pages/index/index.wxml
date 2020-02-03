@@ -1,0 +1,35 @@
+<view class="container">
+  <view>
+  
+  <text class="c">Hi~</text>
+  <image src="/images/16.png" class="b"></image>
+  <text class="a">快开始今天的编程吧</text>
+  </view>
+  <view>
+  
+  <button class='d'  hover-class="hover1">打卡日历></button>
+  </view>
+</view>
+<view class="cen">
+  <image src="/images/17.png" class="i"></image>
+</view>
+<view class="con">
+  <text>-今日任务-</text>
+  <view class="content">
+  <view class="contentone">
+    <image src="/images/18.png" class="ci"></image>
+    <text class="ct">新题目</text>
+  </view>
+  <view class="contentone">
+    <image src="/images/18.png" class="ci"></image>
+    <text class="ct">复习题目</text>
+  </view>
+  <view class="contentone">
+    <image src="/images/18.png" class="ci"></image>
+    <text class="ct">未完成题目</text>
+  </view>
+  </view>
+</view>
+<view>
+<button type="primary" bindtap='jumpPage' class='goodbutton'  hover-class="hover">去选择题目集</button>
+</view>

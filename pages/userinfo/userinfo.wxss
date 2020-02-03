@@ -1,0 +1,4 @@
+/* pages/userinfo/userinfo.wxss */
+.greenBlue-btn{
+    background-color: rgb(64, 214, 214)
+}

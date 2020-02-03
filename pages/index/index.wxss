@@ -1,0 +1,102 @@
+.container{
+  height: 220rpx;
+  display: flex;
+  flex-direction: column;/*垂直布局*/
+}
+.b{
+  width:120rpx;
+  height: 120rpx;
+}
+.a{
+  font-weight: 500;
+  font-size: 550;
+}
+.c{
+  font-weight: 550;
+  margin: 20rpx;
+  font-size: 120rpx;
+}
+
+/* border-radius: 98rpx;是控制按钮边变圆 */
+.d {
+  margin-top: 10px;
+  width: 27%;
+  background-color: #66CDAA;
+  color: rgb(54, 50, 50);
+  border-radius: 98rpx;
+  background: bg_red;
+  font-size: 30rpx;
+  margin: 37rpx;
+}
+ 
+/* 按下变颜色 */
+.hover1 {
+  background:  #98CD9B;
+}
+
+.i{
+  width: 730rpx;
+  height: 100px;
+  margin: 10rpx;
+  align-items: center;
+}
+
+.con{
+  text-align: center;
+}
+.content{
+  width: 100%;
+  height: 180rpx;
+  /*margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;*/
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  font-size: 60rpx;
+
+}
+.contentone{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250rpx;
+  height: 155rpx;
+  /*border-right: 1rpx solid #eee;
+  border-top: 1rpx solid #eee;*/
+  box-sizing: border-box;
+  /*margin: auto;*/
+}
+.ci{
+  width: 60rpx;
+  height: 60px;
+  margin: 10rpx;
+}
+.ct{
+  font-size: 37rpx;
+  font-weight: 550;
+  color: #404040;
+}
+
+
+/* 去掉按钮边框*/
+button::after {
+  border: none;
+}
+/* border-radius: 98rpx;是控制按钮边变圆 */
+.goodbutton {
+  margin-top: 30px;
+  width: 80%;
+  background-color: rgb(252, 126, 67);
+  color: white;
+  border-radius: 98rpx;
+  background: bg_red;
+}
+ 
+/* 按下变颜色 */
+.hover {
+  background:  rgb(236, 179, 156);
+}
+ 

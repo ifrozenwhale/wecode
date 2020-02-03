@@ -1,0 +1,57 @@
+<view class="container">
+  <navigator class="" target="" url="../userinfo/userinfo" hover-class="navigator-hover" open-type="navigate">
+    <image src='/images/5.png' class="a"></image>
+  </navigator>
+  <text class="userinfo">{{username}}\n</text>
+  <view class="" hover-class="none" hover-stop-propagation="false">
+    <text class="b" bindtap="btnExit" >点击退出</text>
+  </view>
+</view>
+<view class="content">
+  <view class="contentone">
+    <image src="/images/1.png" class="ci"></image>
+    <text class="ct">题集</text>
+  </view>
+  <navigator class="" target="" url="../train/train" hover-class="navigator-hover" open-type="navigate">
+    <view class="contentone">
+      <image src="/images/2.png" class="ci"></image>
+      <text class="ct">训练统计</text>
+    </view>
+  </navigator>
+  <navigator class="" target="" url="../finished/finished" hover-class="navigator-hover" open-type="navigate">
+    <view class="contentone">
+      <image src="/images/3.png" class="ci"></image>
+      <text class="ct">错题笔记</text>
+    </view>
+  </navigator>
+  <view class="contentone">
+    <image src="/images/15.png" class="ci"></image>
+    <text class="ct">扩展服务</text>
+  </view>
+</view>
+<view class="hengxian">
+  <image src="/images/14.png" class="underline"></image>
+</view>
+<!-- 第四部分 -->
+<view class="apply">
+  <view class="applyone">
+    <image src="/images/8.png" class="i"></image>
+    <text class="t">我的经验</text>
+    <image src="/images/12.png" class="i"></image>
+  </view>
+  <view class="applyone">
+    <image src="/images/9.png" class="i"></image>
+    <text class="t">打卡提醒</text>
+    <image src="/images/12.png" class="i"></image>
+  </view>
+  <view class="applyone">
+    <image src="/images/10.png" class="i"></image>
+    <text class="t">关于我们</text>
+    <image src="/images/12.png" class="i"></image>
+  </view>
+  <view class="applyone">
+    <image src="/images/11.png" class="i"></image>
+    <text class="t">分享小程序</text>
+    <image src="/images/12.png" class="i"></image>
+  </view>
+</view>

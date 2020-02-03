@@ -1,0 +1,46 @@
+<!-- <view class="" hover-class="none" hover-stop-propagation="false">
+    <text class="" selectable="false" space="false" decode="false">
+        {{problem.id}}
+    </text>
+    <text class="" selectable="false" space="false" decode="false">
+        {{problem.title}}
+    </text>
+    <text class="" selectable="false" space="false" decode="false">
+        {{problem.description}}
+    </text>
+</view> -->
+
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">题目列表</view>
+        <view class="page__desc">Problems List</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-cells__title">LEVEL 2</view>
+        <view class="weui-cells weui-cells_after-title">
+        <view class="" wx:for="{{problem}}" hover-class="none" hover-stop-propagation="false">
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">{{item.title}}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">难度等级: {{item.level}}</view>
+            </navigator>
+        </view>
+        </view>
+        <!-- <view class="weui-cells__title">带图标、说明、跳转的列表项</view>
+        <view class="weui-cells weui-cells_after-title">
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="{{icon}}" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">cell standard</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">说明文字</view>
+            </navigator>
+            <navigator url="" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="{{icon}}" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">cell standard</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">说明文字</view>
+            </navigator>
+        </view> -->
+    </view>
+</view>
