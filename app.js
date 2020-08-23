@@ -29,10 +29,18 @@ App({
   },
 
   appData: {
-    userInfo: null,
+    userInfo: 12,
     github: null,
     blog: null,
     major: null,
-    level: null
+    level: null,
+    xData: null,
+    yData: null,
+    xData2: null,
+    yData2: null,
+    xData3: null,
+    yData3: null,
+    firstDay: null,
+    lastDay: null
   }
 })

@@ -1,0 +1,6 @@
+{
+	"navigationBarTitleText": "小历-calendar 示例",
+  "usingComponents": {
+    "van-popup": "../../dist/popup/index"
+  }
+}

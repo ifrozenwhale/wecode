@@ -1,4 +1,4 @@
-const app = getApp()
+ const app = getApp()
 Page({
   data: {
     showTopTips: false,
@@ -44,6 +44,7 @@ Page({
       major: app.appData.major,
       levelIndex: app.appData.level
     })
+    
     if(app.appData.userInfo != null){
       this.setData({
         username: app.appData.userInfo.username
@@ -102,17 +103,19 @@ Page({
 
   submit: function() {
     // 提交 post
+    var that = this
     wx.request({
-      url: 'http://172.0.0.1:9090/user/' + app.appData.userInfo.username,
-      method: 'POST',
+      url: 'http://127.0.0.1:9090/user/' + app.appData.userInfo.username +'/'+ that.data.levelIndex + '/'+ 
+        that.data.github + '/' +
+      that.data.blog + '/' +
+      that.data.major,
+      method: 'PUT',
       data: {
-        github: this.data.github,
-        blog: this.data.blog,
-        major: this.data.major,
-        level: this.data.level
+        
       },
       header: {
-        'Content-Type': 'application/x-www-form-urlencoded'
+        //'Content-Type': 'application/x-www-form-urlencoded'
+        'Content-Type': 'application/json'
       },
       success: function(res) {
         console.log(res.data)

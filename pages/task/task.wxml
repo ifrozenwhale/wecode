@@ -1,0 +1,59 @@
+<wxs module="result" src="../../utils/taskProcess.wxs"></wxs>
+<view class="pa">
+  <view class="page__hd">
+    <!-- <view class="page__title">List</view> -->
+    <image src="/images/list.png" class="page__title"></image>
+    <view class="page__desc">任务列表</view>
+    <view class="add" hover-class="none" hover-stop-propagation="false">
+      <van-icon name="plus" size="40px" bind:tap="addTask" />
+    </view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-cells__title" bind:tap="showFinished">{{showFinishedInfo}}</view>
+    <view class="weui-cells weui-cells_after-title" wx:if="{{finished == 1}}">
+      <view class="bp" wx:for="{{finishedTasks}}" hover-class="none" hover-stop-propagation="false">
+        <van-swipe-cell right-width="{{ 65 }}" left-width="{{ 65 }}" data-id="{{index}}" async-close bind:close="onCloseFinished">
+          <view slot="left">收藏</view>
+          <van-cell-group>
+            <navigator url="../taskDetail/index?id={{item.id}}&&title={{item.title}}&endDate={{item.endDate}}&sumDay={{item.sumDay}}&summary={{item.summary}}" hover-class="weui-cell_active">
+              <van-cell title="{{item.title}}" value="完成日期: {{item.endDate}}" />
+            </navigator>
+          </van-cell-group>
+          <view slot="right">删除</view>
+        </van-swipe-cell>
+      </view>
+    </view>
+    <view class="weui-cells__title">正在进行的任务</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="" wx:for="{{unfinishedTasks}}" hover-class="none" hover-stop-propagation="false">
+        <van-swipe-cell right-width="{{ 65 }}" left-width="{{ 65 }}" data-id="{{index}}" async-close bind:close="onCloseUnfinished">
+          <view slot="left">收藏</view>
+          <van-cell-group>
+            <navigator url='../taskNow/taskNow?title={{item.title}}&&endDate={{item.endDate}}&&description={{item.description}}&&startDate={{item.startDate}}&&id={{item.id}}' hover-class="weui-cell_active">
+              <van-cell title="{{item.title}}" value="截止日期: {{item.endDate}}" />
+            </navigator>
+          </van-cell-group>
+          <view slot="right">删除</view>
+        </van-swipe-cell>
+      </view>
+    </view>
+  </view>
+  <van-popup show="{{ show }}" position="bottom" custom-style="height: 60%" bind:close="onClose">
+    <form bindsubmit="bindFormSubmit">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <textarea class="weui-textarea" value="{{summary}}" name="textArea" placeholder="恭喜你完成了任务 {{current}} 写下对它的评论吧" style="height: 8.3em" />
+            <view class="weui-textarea-counter">0/200</view>
+            <view class="weui-btn-area">
+              <view class="button-view">
+                <button form-type="submit" class="submit-button">确定</button>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </form>
+  </van-popup>
+  <!-- <van-dialog id="van-dialog" /> -->
+</view>

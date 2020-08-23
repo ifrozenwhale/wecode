@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-panel": "../../dist/panel/index",
+    "van-dialog": "../../dist/dialog/index"
+  }
+}

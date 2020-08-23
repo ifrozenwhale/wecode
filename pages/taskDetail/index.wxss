@@ -1,0 +1,42 @@
+.info {
+  height: 450rpx;
+}
+
+.a {
+  height: 110rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1rpx solid rgb(203, 206, 205);
+}
+
+.b {
+  height: 40rpx;
+  color: #888;
+  margin-bottom: 10rpx;
+  border-bottom: 1rpx solid rgb(203, 206, 205);
+}
+
+.c {
+  font-size: 36rpx;
+  color: #000;
+  margin: 40rpx;
+  flex-grow: 1;
+}
+
+.d {
+  font-size: 36rpx;
+  color: #000;
+  margin: 40rpx;
+  flex-grow: 1;
+}
+
+.button-view {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.submit-button {
+  background-color: rgb(73, 165, 73);
+  width: 40%;
+}

@@ -1,0 +1,42 @@
+<view class="container">
+  <view class="info">
+    <text class="b">基本信息</text>
+    <view class="a">
+      <text class="c">任务名字</text>
+      <text class="d">{{title}}</text>
+    </view>
+    <view class="a">
+      <text class="c">完成日期</text>
+      <text class="d">{{endDate}}</text>
+    </view>
+    <view class="a">
+      <text class="c">完成时长</text>
+      <text class="d">{{sumDay}}</text>
+    </view>
+    <view class="a">
+      <text class="c">个人总结</text>
+      <text class="d" bind:tap="showSummary">查看或编辑</text>
+      <van-popup show="{{ show }}" position="bottom" custom-style="height: 60%" bind:close="onClose">
+        <form bindsubmit="bindFormSubmit">
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+              <view class="weui-cell__bd">
+                <textarea class="weui-textarea" value="{{summary}}" name="textArea" placeholder="恭喜你完成了任务 {{current}} 写下对它的评论吧" style="height: 8.3em" />
+                <view class="weui-textarea-counter">0/200</view>
+                <view class="weui-btn-area">
+                  <view class="button-view">
+                    <button form-type="submit" class="submit-button">确定</button>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </form>
+      </van-popup>
+    </view>
+    <view class=" a ">
+      <text class="c ">计划题目</text>
+      <text class="d " bindtap="showProblems">查看详情</text>
+    </view>
+  </view>
+</view>

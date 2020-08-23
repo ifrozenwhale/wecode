@@ -1,0 +1,18 @@
+<van-panel title="{{problem.title}}" status="{{problem.count}}次"></van-panel>
+<view class="tag-area" hover-class="none" hover-stop-propagation="false" wx:for="{{problem.tagList}}">
+    <van-tag color="#f2826a">{{item}}</van-tag>
+    <!-- <van-tag color="#f2826a" plain>标签</van-tag>
+    <van-tag color="#7232dd">标签</van-tag>
+    <van-tag color="#7232dd" plain>标签</van-tag>
+    <van-tag color="#ffe1e1" text-color="#ad0000">标签</van-tag> -->
+</view>
+<van-panel title="题目描述" status="{{type}}">
+    <view class="description">
+        <rich-text class="" nodes="{{problem.description}}"></rich-text>
+    </view>
+</van-panel>
+<!-- <van-panel title="题目描述" status="状态">
+    <view class="description">
+        <rich-text class="" nodes="{{problem.description}}"></rich-text>
+    </view>
+</van-panel -->

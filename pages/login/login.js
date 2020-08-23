@@ -5,7 +5,7 @@ Page({
     result: '',
     username: '',
     passwd: ''
-  },
+  },  
   inputName: function (e) {	// 用于获取输入的账号
     this.setData({
       username: e.detail.value	//将获取到的账号赋值给username变量
@@ -20,22 +20,31 @@ Page({
 
   log: function (e) {		//与服务器进行交互
     wx.request({
-      url: 'https://baidu.com',
+      url: 'http://127.0.0.1:9090/user/' + this.data.username,
       header: {
         "content-type": "application/json" //使用POST方法要带上这个header
       },
       method: "GET",
       dataType: 'json',
       success: res => {
-        app.appData.github = res.github
-        app.appData.major = res.major
-        app.appData.blog = res.major
+        app.appData.github = res.data.github
+        app.appData.major = res.data.userMajor
+        app.appData.blog = res.data.blog
+        app.appData.level = res.data.level
+        console.log('-----------');
+        
+        console.log(app.appData.level);
+        
       }
 
     })
+     console.log('-----------')
+
+     console.log(app.appData.level)
+        
     wx.request({
-      //url: 'http://127.0.0.1:9090/login',	//获取服务器地址，此处为本地地址
-      url: 'https://baidu.com',
+      url: 'http://127.0.0.1:9090/login',	//获取服务器地址，此处为本地地址
+      //url: 'https://baidu.com',
       header: {
         "content-type": "application/x-www-form-urlencoded"		//使用POST方法要带上这个header
       },

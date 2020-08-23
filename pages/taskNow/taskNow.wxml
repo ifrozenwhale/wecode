@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="info">
+    <text class="b">基本信息</text>
+    <view class="a">
+      <text class="c">任务标题</text>
+      <text class="d">{{title}}</text>
+    </view>
+    <view class="a">
+      <text class="c">开始时间</text>
+      <text class="d">{{startDate}}</text>
+    </view>
+    <view class="a">
+      <text class="c">截止日期</text>
+      <text class="d">{{endDate}}</text>
+    </view>
+    <view class="a">
+      <text class="c">计划题目</text>
+      <text class="d" bindtap="showProblems">查看详情</text>
+    </view>
+    <view class="a">
+      <text class="c">计划描述</text>
+      <text class="d" bindtap="showDesc">查看描述</text>
+    </view>
+  </view>
+
+  <van-dialog id="van-dialog" />
+
+</view>

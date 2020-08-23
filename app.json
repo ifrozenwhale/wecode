@@ -1,12 +1,23 @@
 {
+  "usingComponents": {
+    "van-popup": "dist/popup/index"
+  },
   "pages": [
-    
     "pages/my/my",
-    "pages/detail/detail",
+    "pages/finished/finished",
+  
+
+    "pages/wrongProblem/index",
+    "pages/task/task",
+    "pages/taskProblems/taskProblems",
+    "pages/taskNow/taskNow",
+    "pages/myCalendar/index",
+    "pages/test/test",
+    "pages/taskSetting/index",
     "pages/problems/problems",
+    "pages/taskDetail/index",
     "pages/index/index",
     "pages/problems/problemDetail/problemDetail",
-    "pages/finished/finished",
     "pages/login/login",
     "pages/userinfo/userinfo",
     "pages/train/train"
@@ -30,8 +41,8 @@
         "selectedIconPath": "images/41.png"
       },
       {
-        "pagePath": "pages/detail/detail",
-        "text": "计划",
+        "pagePath": "pages/myCalendar/index",
+        "text": "日历",
         "iconPath": "images/7.png",
         "selectedIconPath": "images/71.png"
       },

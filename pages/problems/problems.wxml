@@ -9,7 +9,6 @@
         {{problem.description}}
     </text>
 </view> -->
-
 <view class="page">
     <view class="page__hd">
         <view class="page__title">题目列表</view>
@@ -18,12 +17,19 @@
     <view class="page__bd">
         <view class="weui-cells__title">LEVEL 2</view>
         <view class="weui-cells weui-cells_after-title">
-        <view class="" wx:for="{{problem}}" hover-class="none" hover-stop-propagation="false">
+            <!-- <view class="" wx:for="{{problem}}" hover-class="none" hover-stop-propagation="false">
                 <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                <view class="weui-cell__bd">{{item.title}}</view>
-                <view class="weui-cell__ft weui-cell__ft_in-access">难度等级: {{item.level}}</view>
-            </navigator>
-        </view>
+                    <view class="weui-cell__bd">{{item.title}}</view>
+                    <view class="weui-cell__ft weui-cell__ft_in-access">难度等级: {{item.level}}</view>
+                </navigator>
+            </view> -->
+            <van-checkbox-group value="{{ result }}" bind:change="onChange">
+                <van-cell-group>
+                    <van-cell center wx:for="{{ problem }}" wx:key="index" title=" {{ item.title}}" label="item.tag" value-class="value-class" clickable data-index="{{ index }}" bind:click="toDetail">
+                        <van-checkbox catch:tap="noop" class="checkboxes-{{ index }}" name="{{ index}}" />
+                    </van-cell>
+                </van-cell-group>
+            </van-checkbox-group>
         </view>
         <!-- <view class="weui-cells__title">带图标、说明、跳转的列表项</view>
         <view class="weui-cells weui-cells_after-title">
@@ -42,5 +48,9 @@
                 <view class="weui-cell__ft weui-cell__ft_in-access">说明文字</view>
             </navigator>
         </view> -->
+        <view class="weui-btn-area">
+            <!-- <button class="weui-btn" type="primary" bindtap="submit">确定</button> -->
+            <button class="weui-btn greenBlue-btn" bindtap="submit">确定</button>
+        </view>
     </view>
 </view>

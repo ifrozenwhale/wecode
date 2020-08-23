@@ -1,0 +1,36 @@
+.info{
+  height: 450rpx;
+}
+
+.a{
+  height: 110rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1rpx solid rgb(203, 206, 205);
+}
+
+.b{
+  height: 40rpx;
+  color: #888888;
+  margin-bottom: 10rpx;
+  border-bottom: 1rpx solid rgb(203, 206, 205);
+}
+
+.c{
+  font-size: 36rpx;
+  color: #000000;
+  margin:40rpx;
+  flex-grow: 1;
+}
+
+.d{
+  font-size: 36rpx;
+  color: #000000;
+  margin:40rpx;
+  flex-grow: 1;
+}
+
+.desc{
+  margin-left: 40rpx;
+  font-size: 16px;
+}

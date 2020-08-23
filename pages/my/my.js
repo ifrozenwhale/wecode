@@ -1,4 +1,5 @@
 var app = getApp();
+var util = require('../../utils/util.js')
 Page({
 
   /**
@@ -18,8 +19,29 @@ Page({
       })
     }
     else{
-      console.log("already"),
+      console.log("already")
       console.log(app.appData.userInfo)
+      // var today = new Date()
+      // var year = today.getFullYear()
+      // var month = today.getMonth()
+      // var cnt = new Date(year, month, 0)
+      // var fd = new Date(year, month, 1)
+      // var ld = new Date(year, month, 0)
+      // var firstDay = util.formatTime(fd)
+      // var lastDay = util.formatTime(ld)
+      // wx.request({
+      //   url: 'http://127.0.0.1:9090/api/calendar/daylist/root/' + firstDay + '/' + lastDay,
+      //   header: { 'content-type': 'application/json' },
+      //   method: 'GET',
+      //   dataType: 'json',
+      //   responseType: 'text',
+      //   success: function(res) {
+      //     console.log(res)     
+      //   },
+      //   fail: function(res) {},
+      //   complete: function(res) {},
+      // })
+
       this.setData({
         username: app.appData.userInfo.username
       })

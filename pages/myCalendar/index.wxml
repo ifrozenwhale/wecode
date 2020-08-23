@@ -1,0 +1,12 @@
+<import src="../../template/calendar/index.wxml" />
+<view class="calendar-wrap">
+  <template is="calendar" data="{{...calendar}}" />
+  <!-- <button class="switchView" type="primary" bindtap="switchView">周/月视图</button> -->
+  <!-- <button bindtap="showInfo">显示/隐藏</button> -->
+  <van-cell title="展示弹出层" is-link bind:click="showPopup" />
+  <van-popup show="{{ show }}" position="bottom" custom-style="height: 40%;" bind:close="onClose">
+    <view class="infoShow">Ac率： {{acRate}}
+  共提交数： {{subNum}}
+  做题数:{{proNum}}</view>
+  </van-popup>
+</view>

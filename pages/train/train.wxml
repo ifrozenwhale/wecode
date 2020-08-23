@@ -1,4 +1,116 @@
-<!--index.wxml-->
-<view class="container">
-  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+<!-- <view class="container">
+  <van-tabs active="{{active}}">
+    <van-tab title="标签 1">
+      <ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ ecBar }}"></ec-canvas>
+    </van-tab>
+    <van-tab title="标签 2">
+      <ec-canvas id="mychart-dom-multi-scatter" canvas-id="mychart-multi-scatter" ec="{{ ecScatter }}"></ec-canvas>
+    </van-tab>
+    <van-tab title="标签 3">内容 3</van-tab>
+    <van-tab title="标签 4">内容 4</van-tab>
+    <van-tab title="标签 5">内容 5</van-tab>
+    <van-tab title="标签 6">内容 6</van-tab>
+  </van-tabs>
+</view> -->
+<view class="container" hover-class="none" hover-stop-propagation="false">
+  <van-tabs active="{{active}}" type="card" class="tab-inchart" bind:click="onChange">
+    <van-tab title="日" name="1">
+      <van-cell title="展示弹出层" is-link bind:click="showPopup" />
+      <van-popup show="{{ show }}" bind:close="onClose">
+        <!-- <van-datetime-picker type="datetime" value="{{ currentDate }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:input="onInput" /> -->
+      </van-popup>
+      <view class="" hover-class="none" hover-stop-propagation="false" wx:if="{{active=='1'}}">
+        <ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ ecBar_0 }}"></ec-canvas>
+      </view>
+      <van-row gutter="60">
+        <van-col offset="2" span="10">
+          <view class="timeSel" hover-class="none" hover-stop-propagation="false">
+            <!-- <van-button class="my-van-btn">平均：{{aveData}}</van-button> -->
+          </view>
+        </van-col>
+        <van-col span="12">
+          <view class="timeSel" hover-class="none" hover-stop-propagation="false">
+            <van-button bind:click="onClickHours" class="my-van-btn">更早一些时间</van-button>
+          </view>
+        </van-col>
+      </van-row>
+    </van-tab>
+    <van-tab title="周" name="2">
+      <view class="" hover-class="none" hover-stop-propagation="false" wx:if="{{active=='2'}}">
+        <ec-canvas id="mychart-dom-multi-scatter" canvas-id="mychart-multi-scatter" ec="{{ ecBar_1 }}"></ec-canvas>
+      </view>
+      <van-row>
+        <van-col offset="18" span="8">
+          <view class="timeSel" hover-class="none" hover-stop-propagation="false">
+            <van-button bind:click="onClickWeekdays" class="my-van-btn">更早</van-button>
+          </view>
+        </van-col>
+      </van-row>
+    </van-tab>
+    <van-tab title="月" name="3">
+      <view class="" hover-class="none" hover-stop-propagation="false" wx:if="{{active=='3'}}">
+        <ec-canvas id="mychart-dom-multi-line" canvas-id="mychart-multi-line" ec="{{ecLine}}"></ec-canvas>
+      </view>
+      <van-row>
+        <van-col offset="18" span="8">
+          <view class="timeSel" hover-class="none" hover-stop-propagation="false">
+            <van-button bind:click="onClickDays" class="my-van-btn">更早</van-button>
+          </view>
+        </van-col>
+      </van-row>
+    </van-tab>
+    <van-tab title="年" name="4">
+      <view class="" hover-class="none" hover-stop-propagation="false" wx:if="{{active=='4'}}">
+        <ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ ecBar_3 }}"></ec-canvas>
+      </view>
+      <van-row>
+        <van-col offset="18" span="8">
+          <view class="timeSel" hover-class="none" hover-stop-propagation="false">
+            <van-button bind:click="onClickMonth" class="my-van-btn">更早</van-button>
+          </view>
+        </van-col>
+      </van-row>
+    </van-tab>
+    <van-tab title="标签 5" name="5">
+      <view class="my-canves" hover-class="none" hover-stop-propagation="false">
+        <van-row>
+          <van-col offset="2" span="8">
+            <!-- <van-button bindtap="showPopup">开始日期</van-button>
+            <van-popup show="{{ show }}" position="top" custom-style="height: 50%;" bind:close="onClose">
+              <van-datetime-picker type="date" value="{{ currentDate }}" min-date="{{ minDate }}" formatter="{{ formatter }}" bind:confirm="onConfirm" bind:input="onInputSd" bind:cancel="onCancel" />
+            </van-popup> -->
+            <picker mode="date" value="{{date}}" start="{{startDay}}" end="{{today}}" bindchange="bindDateChangeSd">
+              <van-button class="weui-btn" type="default">开始日期</van-button>
+            </picker>
+          </van-col>
+          <van-col span="8">
+            <view class="timeSel" selectable="false" space="false" decode="false">
+              {{currentDate_sd}}
+            </view>
+          </van-col>
+        </van-row>
+        <van-row>
+          <van-col offset="2" span="8">
+            <picker mode="date" value="{{date}}" start="{{startDay}}" end="{{today}}" bindchange="bindDateChangeEd">
+              <van-button class="weui-btn" type="default">结束日期</van-button>
+            </picker>
+          </van-col>
+          <van-col span="8">
+            <view class="timeSel" selectable="false" space="false" decode="false">
+              {{currentDate_ed}}
+            </view>
+          </van-col>
+        </van-row>
+      </view>
+    </van-tab>
+    <van-tab title="标签 6" name="6">
+      <van-row>
+        <van-col offset="2" span="8">
+          <view class="timeSel" hover-class="none" hover-stop-propagation="false">
+            <van-button bind:click="onClickMonth">更早</van-button>
+          </view>
+        </van-col>
+      </van-row>
+    </van-tab>
+  </van-tabs>
 </view>

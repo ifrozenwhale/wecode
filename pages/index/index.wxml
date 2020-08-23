@@ -7,14 +7,27 @@
   </view>
   <view>
   
-  <button class='d'  hover-class="hover1">打卡日历></button>
+  <!-- <button class='d'  hover-class="hover1">打卡日历></button> -->
   </view>
 </view>
-<view class="cen">
+<!-- <view class="cen">
   <image src="/images/17.png" class="i"></image>
+</view> -->
+
+  <!-- 坚持打卡天数 -->
+<view class='count'>
+    <text>截至目前，你已坚持打卡</text>
+    <view class='daynumber'>
+    <text class='number'>{{count}}</text>
+    <text class='day'>天</text>
+    </view>    
+    <text>再接再厉，继续努力哦</text>
 </view>
+
 <view class="con">
-  <text>-今日任务-</text>
+  <view class="today-task">
+  <text class="">今日任务</text>
+  </view>
   <view class="content">
   <view class="contentone">
     <image src="/images/18.png" class="ci"></image>
@@ -31,5 +44,5 @@
   </view>
 </view>
 <view>
-<button type="primary" bindtap='jumpPage' class='goodbutton'  hover-class="hover">去选择题目集</button>
+<button type="primary" bindtap='setPlan' class='goodbutton'  hover-class="hover">开始你的计划吧</button>
 </view>

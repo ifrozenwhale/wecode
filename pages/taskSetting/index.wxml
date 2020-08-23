@@ -1,0 +1,69 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="page__hd">
+        <view class="page__title">Plan</view>
+        <view class="page__desc">设定计划</view>
+    </view>
+    <view class="page__bd">
+        <form bindsubmit="bindFormSubmit">
+            <view class="weui-cells__title">表单</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell ">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">任务标题</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" placeholder="请输入任务的标题" bindinput="inputTitle"/>
+                    </view>
+                </view>
+                <view class="weui-cell ">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">开始时间</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <picker class="datePicker" mode="date" value="{{date_1}}" start="2015-09-01" end="2022-09-01" bindchange="bindDateChangeSt">
+                            <view class="weui-input">{{date_1}}</view>
+                        </picker>
+                    </view>
+                </view>
+                <view class="weui-cell ">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">结束时间</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <picker class="datePicker" mode="date" value="{{date_2}}" start="2015-09-01" end="2022-09-01" bindchange="bindDateChangeEd">
+                            <view class="weui-input">{{date_2}}</view>
+                        </picker>
+                    </view>
+                </view>
+            </view>
+            
+            <view class="weui-cells__title">任务描述</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell">
+                    <view class="weui-cell__bd">
+                        <textarea class="weui-textarea" name="textArea" placeholder="请输入对任务的描述" style="height: 3.3em" />
+                        <view class="weui-textarea-counter">0/200</view>
+                    </view>
+                </view>
+            </view>
+            <!-- <button form-type="submit">提交</button> -->
+            <view class="weui-cells__title">题目</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell ">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">练习题目</view>
+                    </view>
+                    <view class="weui-cell__ft">
+                        <van-button bind:tap="getProblem" class="form-btn" round type="primary" color="#2E8B57" size="normal">
+                            {{problemTips}}
+                        </van-button>
+                    </view>
+                </view>
+            </view>
+          
+            <view class="weui-btn-area">
+                <button type="primary" form-type="submit">提交</button>
+            </view>
+        </form>
+    </view>
+</view>

@@ -1,0 +1,32 @@
+<!-- <view class="" hover-class="none" hover-stop-propagation="false">
+    <text class="" selectable="false" space="false" decode="false">
+        {{problem.id}}
+    </text>
+    <text class="" selectable="false" space="false" decode="false">
+        {{problem.title}}
+    </text>
+    <text class="" selectable="false" space="false" decode="false">
+        {{problem.description}}
+    </text>
+</view> -->
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">题目列表</view>
+        <view class="page__desc">Problems List</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-cells__title">{{planTitle}}</view>
+        <view class="weui-cells weui-cells_after-title">
+            <van-checkbox-group value="{{ result }}" bind:change="onChange">
+                <van-cell-group>
+                    <van-cell center wx:for="{{ problem }}" wx:key="index" title=" {{ item.title}}" label="item.tag" value-class="value-class" clickable data-index="{{ index }}" bind:click="toDetail">
+                        <van-checkbox catch:tap="noop" class="checkboxes-{{ index }}" name="{{ index}}" />
+                    </van-cell>
+                </van-cell-group>
+            </van-checkbox-group>
+        </view>
+        <view class="weui-btn-area">
+            <button class="weui-btn greenBlue-btn" bindtap="submit">确定</button>
+        </view>
+    </view>
+</view>

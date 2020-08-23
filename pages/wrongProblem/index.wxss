@@ -1,0 +1,16 @@
+.description {
+    margin: 7.5%;
+
+}
+
+.title {
+    margin: 7.5%;
+    height: 80rpx;
+}
+
+.tag-area {
+    margin-left: 7%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: white;
+}

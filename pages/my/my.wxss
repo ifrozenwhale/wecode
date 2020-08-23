@@ -23,7 +23,7 @@
   justify-content: center;*/
   display: flex;
   flex-wrap: wrap;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   font-size: 60rpx;
 
 }
@@ -43,6 +43,7 @@
   width: 90rpx;
   height: 155px;
   margin: 10rpx;
+  margin-top: 20rpx;
 }
 .ct{
   font-size: 37rpx;
@@ -57,8 +58,9 @@
   width: 95%;
   display: flex;
   flex-direction: row;
-  border-bottom: 1rpx solid #FFFFFF;
-  margin:10rpx;
+  border-bottom: 0rpx solid rgb(211, 211, 211);
+  margin:20rpx;
+  background: rgba(196, 197, 197, 0.458)
 }
 .i{
   width: 65rpx;

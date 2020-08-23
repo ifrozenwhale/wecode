@@ -44,7 +44,8 @@
         </view>
         <view class="weui-btn-area">
             <!-- <button class="weui-btn" type="primary" bindtap="submit">确定</button> -->
-            <button class="weui-btn blue-btn"  bindtap="submit">确定</button>
+
+            <button class="weui-btn greenBlue-btn" bindtap="submit">确定</button>
         </view>
     </view>
 </view>

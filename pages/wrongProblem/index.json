@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "van-cell": "../../dist/cell/index",
+        "van-cell-group": "../../dist/cell-group/index",
+        "wemark": "../../wemark/wemark",
+        "van-panel": "../../dist/panel/index",
+        "van-tag": "../../dist/tag/index"
+    }
+}

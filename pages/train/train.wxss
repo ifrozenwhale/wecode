@@ -1,5 +1,87 @@
 /**index.wxss**/
 ec-canvas {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 70%;
+}
+
+.tab-inchart {
+  margin-top: 20px;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+picker {
+  margin-bottom: 16px;
+}
+.sub-container {
+  position: absolute;
+  top: 30%;
+  bottom: 20%;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.my-canves{
+  margin-top: 10px;
+}
+#mychart-dom-multi-bar {
+
+  position: fixed;
+  top: 20%;
+  bottom: 0%;
+  left: 2%;
+  right: 0;
+}
+
+#mychart-dom-multi-scatter {
+  position: fixed;
+  top: 20%;
+  bottom: 0%;
+  left: 5%;
+  right: 0%;
+}
+
+#mychart-dom-multi-line {
+  position: fixed;
+  top: 20%;
+  bottom: 0%;
+  left: 2%;
+  right: 0%;
+}
+.my-van-btn{
+  background-color: rgb(132, 152, 170);
+}
+.timeSel{
+  margin-top: 10%;
+  margin-bottom: 0px;
+  margin-left: 0px;
+
+}
+
+.timeSel2{
+  margin: 35rpx 0 100rpx 550rpx
+}
+.timeSel1{
+  margin: 35rpx 0 100rpx 10rpx
+}
+.ave{
+  width: 30%;
+  background-color: aquamarine;
+
 }

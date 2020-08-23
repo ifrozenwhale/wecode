@@ -1,0 +1,17 @@
+var result = {
+  numberToResult: function(value) {
+    if (value == 0) return ' AC'
+    else if (value == -1) return ' WA'
+    else return 'Other'
+  },
+  numberToIcon: function(value) {
+    if (value == 0) return 'success'
+    else if (value == -1) return 'warn'
+    else return 'info'
+  }
+}
+// 导出对外暴露的属性
+module.exports = {
+  numberToResult: result.numberToResult,
+  numberToIcon: result.numberToIcon
+}
