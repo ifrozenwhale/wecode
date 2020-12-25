@@ -21,7 +21,7 @@
 
    - 进入小程序后自动判断是否已登录，如未登录则跳转登录界面。
 
-<img src="D:\竞赛\计算机设计大赛\img\登录.png" alt="登录" style="zoom:25%;" />
+<img src="./doc/登录.png" alt="登录" style="zoom:25%;" />
 
 
 
